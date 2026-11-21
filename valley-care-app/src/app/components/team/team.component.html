@@ -1,0 +1,32 @@
+<section id="team">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Our Practitioners</span>
+      <h2 class="h2">Meet the team</h2>
+      <p class="sub">Patients regularly mention our practitioner by name in their reviews.</p>
+    </div>
+
+    <div class="team" [class.single]="practitioners.length === 1">
+      @for (p of practitioners; track p.name; let i = $index) {
+        <div class="dr rv" appReveal [class.d1]="i === 1">
+          <div class="av" role="button" tabindex="0" title="View photo" [attr.aria-label]="'View photo of ' + p.name"
+               (click)="open(p)" (keydown.enter)="open(p)">
+            @if (photos()[p.name]; as src) {
+              <img [src]="src" [alt]="p.name">
+            } @else {
+              {{ p.initial }}
+            }
+          </div>
+          <h3>{{ p.name }}</h3>
+          <div class="rl">{{ p.role }}</div>
+          <p>{{ p.desc }}</p>
+        </div>
+      }
+    </div>
+
+    <div class="cred rv" appReveal>
+      <span>Chiropractic Doctor (DC)</span>
+      <span>All India Council of Alternative Medical Science &amp; Research · Class of 2020</span>
+    </div>
+  </div>
+</section>

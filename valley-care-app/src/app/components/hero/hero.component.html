@@ -1,0 +1,27 @@
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="loc">📍 Karan Nagar, Srinagar</span>
+      <h1>Heal naturally.<br><em>Move freely.</em></h1>
+      <p class="lead">A drugless, holistic and alternative therapy clinic offering chiropractic care, hijama, acupuncture, reflexology, deep tissue massage and more.</p>
+      <div class="cta">
+        <a class="btn fill" [href]="igDm" target="_blank" rel="noopener" (click)="book($event)">Book Appointment</a>
+        <a class="btn line" href="tel:+919797043123">Call 97970 43123</a>
+      </div>
+      <div class="tags"><span>Chiropractic</span><span>Hijama</span><span>Acupuncture</span><span>Sports Injury</span></div>
+    </div>
+
+    <div class="stage" aria-hidden="true">
+      <div class="ph p1">
+        @if (photos()[0]; as src) { <img [src]="src" alt="Valley Care Centre"> } @else { VCC }
+      </div>
+      <div class="ph p2">
+        @if (photos()[1]; as src) { <img [src]="src" alt="Valley Care Centre"> }
+      </div>
+      <div class="ph p3">
+        @if (photos()[2]; as src) { <img [src]="src" alt="Valley Care Centre"> }
+      </div>
+      <div class="glass"><b>4.7 ★</b>79 Google reviews</div>
+    </div>
+  </div>
+</section>

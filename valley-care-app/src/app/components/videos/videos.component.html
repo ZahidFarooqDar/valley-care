@@ -1,0 +1,24 @@
+<section id="videos">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Watch</span>
+      <h2 class="h2">See us in action</h2>
+      <p class="sub">Reels from our Instagram, &#64;valleycarecentre_.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Video categories" style="margin-top:28px">
+      @for (k of keys; track k) {
+        <button class="tab" type="button" role="tab" [attr.aria-selected]="active() === k" (click)="active.set(k)">{{ k }}</button>
+      }
+    </div>
+
+    <div class="vg">
+      @for (r of reels(); track r.id) {
+        <div class="vc">
+          <iframe [src]="r.src" loading="lazy" allowfullscreen title="Valley Care Centre reel"></iframe>
+          <a [href]="r.href" target="_blank" rel="noopener">Watch on Instagram →</a>
+        </div>
+      }
+    </div>
+  </div>
+</section>

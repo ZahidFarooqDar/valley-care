@@ -1,0 +1,24 @@
+<section class="alt" id="hours">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Hours &amp; Booking</span>
+      <h2 class="h2">When to visit</h2>
+    </div>
+
+    <div class="hrs rv" appReveal>
+      <div class="tabs" role="tablist" aria-label="Clinic hours">
+        @for (k of keys; track k) {
+          <button class="tab" type="button" role="tab" [attr.aria-selected]="active() === k" (click)="active.set(k)">{{ label(k) }}</button>
+        }
+      </div>
+
+      <div>
+        @for (row of rows(); track row[0]) {
+          <div class="hr"><b>{{ row[0] }}</b><span>{{ row[1] }}</span></div>
+        }
+      </div>
+
+      <div class="pay"><span>Appointments recommended</span><span>Google Pay accepted</span><span>Restrooms on site</span></div>
+    </div>
+  </div>
+</section>

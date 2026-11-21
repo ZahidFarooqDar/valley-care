@@ -1,0 +1,23 @@
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <app-logo />
+      <span>Valley Care Centre<small>KARAN NAGAR · SRINAGAR</small></span>
+    </a>
+
+    <nav aria-label="Main">
+      <ul id="menu" [class.open]="menuOpen()" (click)="onMenuClick($event)">
+        <li><a href="#treatments">Treatments</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#team">Practitioners</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn cop" [href]="igDm" target="_blank" rel="noopener" (click)="book($event)">Book Appointment</a>
+    <button class="burger" type="button" aria-label="Menu" [attr.aria-expanded]="menuOpen()" (click)="toggle()">☰</button>
+  </div>
+</header>

@@ -1,0 +1,22 @@
+<section id="treatments">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow rv" appReveal>Our Treatments</span>
+      <h2 class="h2 rv" appReveal>Drugless care for the whole body</h2>
+      <p class="sub rv" appReveal>Every visit begins with understanding your concern. Tap Book on any treatment to message us on Instagram.</p>
+    </div>
+
+    <div class="tg">
+      @for (t of treatments; track t.name; let i = $index) {
+        <article class="tc rv" appReveal [style.transition-delay]="(i % 3) * 0.08 + 's'" (mousemove)="glow($event)">
+          <div class="ic">{{ t.icon }}</div>
+          <h3>{{ t.name }}</h3>
+          <p>{{ t.desc }}</p>
+          <button type="button" (click)="book(t.name)">Book</button>
+        </article>
+      }
+    </div>
+
+    <p class="disc">Information on this website is for general awareness and does not replace an individual assessment or emergency care. Suitability of any treatment depends on consultation. Appointments are recommended.</p>
+  </div>
+</section>
