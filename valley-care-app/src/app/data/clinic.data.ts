@@ -61,3 +61,14 @@ export const GALLERY: string[][] = [
 ];
 
 export const MARQUEE = ['Chiropractic Care', 'Hijama', 'Acupuncture', 'Dry Needling', 'Reflexology', 'Deep Tissue Massage', 'Sports Injury', 'Tattoo Removal'];
+
+/** "In the News" clippings. Save the images as src/assets/news/news1.png ... news5.png
+ *  (.png, .jpg, .jpeg or .webp all work). Edit the titles below as you like. */
+export interface NewsItem { title: string; file: string; }
+export const NEWS: NewsItem[] = [
+  { title: 'The Times Of India', file: '/assets/valley-care/news/news4.png' },
+  { title: 'Greater Kashmir', file: '/assets/valley-care/news/news2.png' },
+  { title: 'Rising Kashmir', file: '/assets/valley-care/news/news3.png' },
+  { title: 'Brighter Kashmir', file: '/assets/valley-care/news/news1.png' },
+  { title: 'Brighter Kashmir', file: '/assets/valley-care/news/news5.png' }
+];

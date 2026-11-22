@@ -1,0 +1,25 @@
+<section class="why" id="news">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">In the News</span>
+      <h2 class="h2">What the news says about us</h2>
+      <p class="sub">Tap any clipping to read it in full.</p>
+    </div>
+
+    <div class="ng">
+      @for (tile of tiles(); track $index; let i = $index) {
+        <div class="nc rv" appReveal [style.transition-delay]="(i % 3) * 0.08 + 's'"
+             [attr.role]="tile.src ? 'button' : null" [attr.tabindex]="tile.src ? 0 : null"
+             [attr.aria-label]="tile.src ? 'Open ' + tile.title : null"
+             (click)="open(tile)" (keydown.enter)="open(tile)">
+          @if (tile.src) {
+            <img [src]="tile.src" [alt]="tile.title">
+            <div class="cap"><span>{{ tile.title }}</span><i>View</i></div>
+          } @else {
+            {{ tile.title }}
+          }
+        </div>
+      }
+    </div>
+  </div>
+</section>

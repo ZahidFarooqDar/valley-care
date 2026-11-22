@@ -1,6 +1,6 @@
 <div class="lightbox" [class.open]="lightbox.state().open" role="dialog" aria-modal="true" aria-label="Practitioner photo"
      (click)="onBackdrop($event)">
-  <div class="lightbox-inner">
+  <div class="lightbox-inner" [class.wide]="lightbox.state().wide">
     <button class="lightbox-close" type="button" aria-label="Close" (click)="lightbox.close()">&times;</button>
     <img [src]="lightbox.state().src" [alt]="lightbox.state().name">
     <div class="lightbox-caption">{{ lightbox.state().name }}</div>

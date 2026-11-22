@@ -1,13 +1,14 @@
 import { Injectable, signal } from '@angular/core';
 
-export interface LightboxState { open: boolean; src: string; name: string; }
+export interface LightboxState { open: boolean; src: string; name: string; wide: boolean; }
 
 @Injectable({ providedIn: 'root' })
 export class LightboxService {
-  state = signal<LightboxState>({ open: false, src: '', name: '' });
+  state = signal<LightboxState>({ open: false, src: '', name: '', wide: false });
 
-  open(src: string, name: string): void {
-    this.state.set({ open: true, src, name });
+  /** wide = true gives a larger window (used for news clippings). */
+  open(src: string, name: string, wide = false): void {
+    this.state.set({ open: true, src, name, wide });
     document.body.style.overflow = 'hidden';
   }
 

@@ -185,9 +185,21 @@ footer ul{list-style:none;padding:0}footer li{margin-bottom:8px}footer a:hover{c
 @media(max-width:520px){.wg,.gg{grid-template-columns:1fr}.glass{left:6px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
 
+/* In the News */
+.ng{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:44px}
+.nc{position:relative;aspect-ratio:3/4;border-radius:22px;overflow:hidden;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);display:grid;place-items:center;padding:16px;text-align:center;color:rgba(255,255,255,.7);font:400 1.2rem 'DM Serif Display';transition:opacity .8s,transform .3s,box-shadow .3s,border-color .3s}
+.nc[role=button]{cursor:pointer}
+.nc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
+.nc:hover{transform:translateY(-6px);border-color:var(--copper);box-shadow:0 24px 44px rgba(0,0,0,.35)}
+.nc:hover img{transform:scale(1.06)}
+.nc .cap{position:absolute;left:0;right:0;bottom:0;padding:38px 16px 14px;background:linear-gradient(transparent,rgba(9,63,70,.94));color:#fff;font:600 .9rem 'DM Sans';text-align:left;display:flex;justify-content:space-between;align-items:flex-end;gap:8px}
+.nc .cap i{font-style:normal;font-size:.74rem;border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:3px 12px;white-space:nowrap}
+.lightbox-inner.wide{max-width:min(920px,94vw)}
+@media(max-width:520px){.ng{grid-template-columns:1fr 1fr}}
+
 /* Angular component host elements: no layout box, so the layout is identical to the original page */
 app-root{display:block}
-app-header,app-hero,app-highlights,app-treatments,app-why-us,app-team,app-hours,app-videos,app-gallery,app-visit,app-book-cta,app-footer,app-dock,app-toast,app-lightbox,app-logo{display:contents}
+app-header,app-hero,app-highlights,app-treatments,app-why-us,app-team,app-hours,app-videos,app-news,app-gallery,app-visit,app-book-cta,app-footer,app-dock,app-toast,app-lightbox,app-logo{display:contents}
 
 /* One practitioner: keep the card centred */
 @media(min-width:961px){.team.single{grid-template-columns:minmax(0,360px)}}

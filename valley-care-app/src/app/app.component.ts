@@ -8,6 +8,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { HighlightsComponent } from './components/highlights/highlights.component';
 import { HoursComponent } from './components/hours/hours.component';
 import { LightboxComponent } from './components/lightbox/lightbox.component';
+import { NewsComponent } from './components/news/news.component';
 import { TeamComponent } from './components/team/team.component';
 import { ToastComponent } from './components/toast/toast.component';
 import { TreatmentsComponent } from './components/treatments/treatments.component';
@@ -20,7 +21,7 @@ import { WhyUsComponent } from './components/why-us/why-us.component';
   standalone: true,
   imports: [
     HeaderComponent, HeroComponent, HighlightsComponent, TreatmentsComponent, WhyUsComponent, TeamComponent,
-    HoursComponent, VideosComponent, GalleryComponent, VisitComponent, BookCtaComponent, FooterComponent,
+    HoursComponent, VideosComponent, NewsComponent, GalleryComponent, VisitComponent, BookCtaComponent, FooterComponent,
     DockComponent, ToastComponent, LightboxComponent
   ],
   templateUrl: './app.component.html'
