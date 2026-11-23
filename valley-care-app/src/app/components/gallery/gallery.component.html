@@ -2,18 +2,18 @@
   <div class="wrap">
     <div class="center">
       <span class="eyebrow">Gallery</span>
-      <h2 class="h2">Inside the clinic</h2>
+      <h2 class="h2">Gallery Section</h2>
     </div>
 
     <div class="gg">
       @for (tile of tiles(); track $index) {
-        <div class="gt rv" appReveal>
-          @if (tile) {
-            <img [src]="tile" alt="Valley Care Centre clinic">
-          } @else {
-            Valley Care Centre
-          }
-        </div>
+      <div class="gt rv" appReveal>
+        @if (tile) {
+        <img [src]="tile" alt="Valley Care Centre clinic">
+        } @else {
+        Valley Care Centre
+        }
+      </div>
       }
     </div>
   </div>

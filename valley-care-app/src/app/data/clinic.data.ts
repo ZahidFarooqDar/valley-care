@@ -51,13 +51,16 @@ export const VIDEOS: Record<string, string[]> = {
   'Find Us': ['DY4uulSTNR-']
 };
 
-export const HERO_PHOTOS = ['gallery-1.png', 'gallery-2.png', 'gallery-3.png'];
+export const HERO_PHOTOS = ['hero-1.png', 'hero-2.png', 'hero-3.png'];
 
 /** "Inside the clinic": each tile lists files to try in order. */
 export const GALLERY: string[][] = [
-  ['inside1.png', 'gallery-1.jpg'],
-  ['inside2.png', 'gallery-2.png'],
-  ['inside3.jpg', 'gallery-3.jpg']
+  ['gallery-1.jpg', 'hero-1.png',],
+  ['gallery-2.png', 'hero-2.png'],
+  ['gallery-3.jpg', 'hero-3.jpg'],
+  ['gallery-4.jpg', 'hero-4.jpg'],
+  ['gallery-5.jpg', 'hero-4.jpg'],
+  ['gallery-6.jpg', 'hero-4.jpg']
 ];
 
 export const MARQUEE = ['Chiropractic Care', 'Hijama', 'Acupuncture', 'Dry Needling', 'Reflexology', 'Deep Tissue Massage', 'Sports Injury', 'Tattoo Removal'];
@@ -70,5 +73,11 @@ export const NEWS: NewsItem[] = [
   { title: 'Greater Kashmir', file: '/assets/valley-care/news/news2.png' },
   { title: 'Rising Kashmir', file: '/assets/valley-care/news/news3.png' },
   { title: 'Brighter Kashmir', file: '/assets/valley-care/news/news1.png' },
-  { title: 'Brighter Kashmir', file: '/assets/valley-care/news/news5.png' }
+  { title: 'Brighter Kashmir', file: '/assets/valley-care/news/news5.png' },
+  { title: 'The Global Kashmir', file: '/assets/valley-care/news/news6.png' },
+  { title: 'Merc Times', file: '/assets/valley-care/news/news7.png' },
+  { title: 'News Glory', file: '/assets/valley-care/news/news8.png' },
+  { title: 'Temeel e Irshad', file: '/assets/valley-care/news/news9.png' },
+  { title: 'Weekly News', file: '/assets/valley-care/news/news10.png' }
+
 ];
