@@ -6,14 +6,23 @@
     </div>
 
     <div class="gg">
-      @for (tile of tiles(); track $index) {
-      <div class="gt rv" appReveal>
-        @if (tile) {
-        <img [src]="tile" alt="Valley Care Centre clinic">
-        } @else {
-        Valley Care Centre
-        }
-      </div>
+      @for (tile of tiles(); track $index; let i = $index) {
+        <div class="gt rv" appReveal
+             [style.transition-delay]="(i % 3) * 0.08 + 's'">
+
+          @if (tile.src) {
+            <img [src]="tile.src" [alt]="tile.title || 'Valley Care Centre clinic'">
+
+            @if (tile.title) {
+              <div class="cap">
+                <span>{{ tile.title }}</span>
+              </div>
+            }
+          } @else {
+            Valley Care Centre
+          }
+
+        </div>
       }
     </div>
   </div>

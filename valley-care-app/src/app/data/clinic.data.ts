@@ -14,7 +14,10 @@ export const EMAIL = 'valleycarecentre@gmail.com';
 
 export interface Treatment { icon: string; name: string; desc: string; }
 export interface Practitioner { name: string; initial: string; role: string; desc: string; photo: string; }
-
+export interface GalleryItem {
+  file: string;
+  title?: string;
+}
 export const TREATMENTS: Treatment[] = [
   { icon: '🦴', name: 'Chiropractic Care', desc: 'Hands-on bone and spine alignment for back, neck and joint concerns.' },
   { icon: '🫧', name: 'Hijama (Cupping Therapy)', desc: 'Traditional wet cupping, performed by our hijama practitioner.' },
@@ -53,14 +56,13 @@ export const VIDEOS: Record<string, string[]> = {
 
 export const HERO_PHOTOS = ['hero-1.png', 'hero-2.png', 'hero-3.png'];
 
-/** "Inside the clinic": each tile lists files to try in order. */
-export const GALLERY: string[][] = [
-  ['gallery-1.jpg', 'hero-1.png',],
-  ['gallery-2.png', 'hero-2.png'],
-  ['gallery-3.jpg', 'hero-3.jpg'],
-  ['gallery-4.jpg', 'hero-4.jpg'],
-  ['gallery-5.jpg', 'hero-4.jpg'],
-  ['gallery-6.jpg', 'hero-4.jpg']
+export const GALLERY: GalleryItem[] = [
+  { file: 'gallery-1.jpg', title: 'Patient From Iran' },
+  { file: 'gallery-2.png', title: 'Valley Care Centre' },
+  { file: 'gallery-3.jpg', title: 'Valley Care Centre' },
+  { file: 'gallery-4.jpg', title: 'Valley Care Centre' },
+  { file: 'gallery-5.jpg', title: 'Valley Care Centre' },
+  { file: 'gallery-6.jpg', title: 'Valley Care Centre' }
 ];
 
 export const MARQUEE = ['Chiropractic Care', 'Hijama', 'Acupuncture', 'Dry Needling', 'Reflexology', 'Deep Tissue Massage', 'Sports Injury', 'Tattoo Removal'];

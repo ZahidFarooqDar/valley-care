@@ -1,3 +1,4 @@
+
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { GALLERY } from '../../data/clinic.data';
 import { RevealDirective } from '../../directives/reveal.directive';
@@ -10,14 +11,27 @@ import { ImageLoaderService } from '../../services/image-loader.service';
   templateUrl: './gallery.component.html'
 })
 export class GalleryComponent implements OnInit {
+
   private images = inject(ImageLoaderService);
-  tiles = signal<(string | null)[]>(GALLERY.map(() => null));
+
+  tiles = signal<
+    { src: string | null; title: string }[]
+  >(
+    GALLERY.map(item => ({
+      src: null,
+      title: item.title?.trim() || ''
+    }))
+  );
 
   ngOnInit(): void {
-    GALLERY.forEach((files, i) => {
-      this.images.loadFirst(files).then(src =>
-        this.tiles.update(list => list.map((item, k) => (k === i ? src : item)))
-      );
+    GALLERY.forEach((item, i) => {
+      this.images.loadFirst([item.file]).then(src => {
+        this.tiles.update(list =>
+          list.map((tile, k) =>
+            k === i ? { ...tile, src } : tile
+          )
+        );
+      });
     });
   }
 }
