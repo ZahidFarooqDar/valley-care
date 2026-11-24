@@ -58,11 +58,11 @@ export const HERO_PHOTOS = ['hero-1.png', 'hero-2.png', 'hero-3.png'];
 
 export const GALLERY: GalleryItem[] = [
   { file: 'gallery-1.jpg', title: 'Patient From Iran' },
-  { file: 'gallery-2.png', title: 'Valley Care Centre' },
-  { file: 'gallery-3.jpg', title: 'Valley Care Centre' },
-  { file: 'gallery-4.jpg', title: 'Valley Care Centre' },
-  { file: 'gallery-5.jpg', title: 'Valley Care Centre' },
-  { file: 'gallery-6.jpg', title: 'Valley Care Centre' }
+  { file: 'gallery-2.png', title: '' },
+  { file: 'gallery-3.jpg', title: '' },
+  { file: 'gallery-4.jpg', title: '' },
+  { file: 'gallery-5.jpg', title: '' },
+  { file: 'gallery-6.jpg', title: '' }
 ];
 
 export const MARQUEE = ['Chiropractic Care', 'Hijama', 'Acupuncture', 'Dry Needling', 'Reflexology', 'Deep Tissue Massage', 'Sports Injury', 'Tattoo Removal'];
