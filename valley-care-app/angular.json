@@ -31,6 +31,11 @@
                 "output": "/"
               },
               {
+                "glob": "googlefa19fa9c7b51e177.html",
+                "input": "src",
+                "output": "/"
+              },
+              {
                 "glob": "sitemap.xml",
                 "input": "src",
                 "output": "/"
